@@ -68,10 +68,22 @@ Optional paramaters:
   # for install.
 
   -e|--exclude <string> [--exclude <string 2>]
-  # If more than one asset is matched during an install, use the --exclue flag to not
+  # If more than one asset is matched during an install, use the --exclude flag to not
   # match any assets with the excluded string. Every exclude string must not match to be
   # considered for install.
 
+  -u:--user
+  # Run in rootless user mode with a ~/.config/gam/gam.conf configuration, executables in,
+  # ~/bin (by default), and no support for rpm or deb files.
+
   -d|--debug
   # Debug mode to show what is happening behind the scenes.
+```
+
+## User mode
+You may run this application without `sudo` or root by utilizing the `--user` flag. The biggest changes will be that applications shortcuts will be placed into `~/bin` by default instead of your path, and `dep` and `rpm` packages are not supported. The basic process is:
+``` bash
+gam create-config --user
+gam list --user
+gam install author/app --user
 ```
