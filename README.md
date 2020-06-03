@@ -81,7 +81,7 @@ Optional paramaters:
 ```
 
 ## User mode
-You may run this application without `sudo` or root by utilizing the `--user` flag. The biggest changes will be that applications shortcuts will be placed into `~/bin` by default instead of your path, and `dep` and `rpm` packages are not supported. The basic process is:
+You may run this application without `sudo` or root by utilizing the `--user` flag. The biggest changes will be that application shortcuts will be placed into `~/bin` by default instead of your path, and `dep` and `rpm` packages are not supported. The basic process is:
 ``` bash
 gam create-config --user
 gam list --user
