@@ -38,6 +38,9 @@ This will create an `/etc/gam.conf` file with the following settings that can be
 # The folder to install applications into
 INSTALL_FOLDER=/opt/github
 
+# Where to symlink executables for the path
+BIN_FOLDER=/bin
+
 # Where to place temporary cache files
 TMP_FOLDER=/tmp/gam
 
